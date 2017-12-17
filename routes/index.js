@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const productController = require('../controllers/productController');
+const userController = require('../controllers/userController');
 
 /* GET home page. */
-router.get('/asd', function(req, res, next) {
-  res.json('asdasd');
-});
+router.get('/', productController.getProducts);
+router.get('/add', productController.addProduct);
+router.get('/register', userController.registerForm);
+router.post('/add', productController.createProduct);
+router.post('/register', userController.register);
 
 module.exports = router;
