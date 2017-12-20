@@ -4,7 +4,7 @@ const productController = require('../controllers/productController');
 const userController = require('../controllers/userController');
 
 /* GET home page. */
-router.get('/', productController.getProducts);
+router.get('/products', productController.getProducts);
 router.get('/add', productController.addProduct);
 router.get('/register', userController.registerForm);
 router.post('/add', productController.createProduct);
