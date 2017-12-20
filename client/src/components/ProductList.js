@@ -12,7 +12,6 @@ class ProductList extends Component {
       const res = await fetch('/products');
       const products = await res.json();
       this.setState({ products });
-      console.log(this.state.products);
     } catch (e) {
       console.log(e);
     }
