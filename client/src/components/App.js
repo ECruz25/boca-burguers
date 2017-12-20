@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import logo from '../logo.svg';
 import '../App.css';
 
+import Header from './Header';
 import ProductList from './ProductList';
 import Order from './Order';
 
@@ -14,7 +15,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/" component={ProductList} exact={true} />
-            <Route path="/order" component={AddConnectionPage} />
+            <Route path="/order" component={Order} />
           </Switch>
         </div>
       </Router>
